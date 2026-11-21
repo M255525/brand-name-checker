@@ -4,7 +4,7 @@
 
 - 純靜態：`index.html`（CSS）＋`data.js`（規則引擎 `window.BNC`，node 可 require）＋`app.js`（畫面）＋`ai.js`（BYOK 7 家，`window.TOOL_AI`）＋`watermark.js`（`TOOL_WATERMARK`）＋`manual.html`＋PWA。
 - 本機預覽 port **8907**（`.claude/launch.json` 的 `brand-name-checker`；程式牆 `LOCAL_APPS`＋`MARKETING_SUB` 行銷・創意發想）。visitor-badge `m255525.brandnamechecker`（手冊 `.manual`）。
-- 尚未上線。上線後在這裡記網址與日期；改版要升 `service-worker.js` 的 `CACHE_NAME` 再 push。
+- **2026-11-21 已上線** <https://m255525.github.io/brand-name-checker/>（`publish.mjs`：建 repo＋push → 開 Pages → 補 master 部署規則 → workflow_dispatch）。程式牆 `REPO_META`、github-dashboard、AI 工具導航已登記。改版後升 `service-worker.js` 的 `CACHE_NAME` 再 push。
 - **工具不連線查智慧局**（沒有公開 API、也不爬網站）；查證一律開連結讓使用者自己查。智慧局、商工登記無法用網址帶入名稱，點連結時會順便把名稱複製到剪貼簿。
 
 ## 規則（改了 `data.js` 跑 `node tools/test_engine.mjs`，2064 項含 2000 組亂數）
