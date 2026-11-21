@@ -3,7 +3,7 @@
 給要開店或推新品牌的人：選產業與品牌個性 → 規則式產生候選名／自己輸入／AI 想 → 依商標法第 29、30 條規則初篩（紅黃綠燈＋理由＋法條）、比對內建常見知名品牌 → 木刻／霓虹／壓克力招牌預覽 → 收藏的名字整理成查證清單（智慧局商標檢索、商工登記、Google、IG、FB、網域，查完自己記結果，給一句結論）→ 複製／列印初篩報告；AI 寫品牌故事與標語。2026-11-21 用 `小工具/tool-scaffold`（`--ai byok`）建立；使用者從新工具清單挑了這個，規格由 Claude 自行決定。
 
 - 純靜態：`index.html`（CSS）＋`data.js`（規則引擎 `window.BNC`，node 可 require）＋`app.js`（畫面）＋`ai.js`（BYOK 7 家，`window.TOOL_AI`）＋`watermark.js`（`TOOL_WATERMARK`）＋`manual.html`＋PWA。
-- 本機預覽 port **8907**（`.claude/launch.json` 的 `brand-name-checker`；程式牆 `LOCAL_APPS`＋`MARKETING_SUB` 行銷・創意發想）。visitor-badge `m255525.brandnamechecker`（手冊 `.manual`）。
+- 本機預覽 port **8907**（`.claude/launch.json` 的 `brand-name-checker`；程式牆上線後在 `REPO_META`，`MARKETING_SUB` 行銷・創意發想）。visitor-badge `m255525.brandnamechecker`（手冊 `.manual`）。
 - **2026-11-21 已上線** <https://m255525.github.io/brand-name-checker/>（`publish.mjs`：建 repo＋push → 開 Pages → 補 master 部署規則 → workflow_dispatch）。程式牆 `REPO_META`、github-dashboard、AI 工具導航已登記。改版後升 `service-worker.js` 的 `CACHE_NAME` 再 push。
 - **工具不連線查智慧局**（沒有公開 API、也不爬網站）；查證一律開連結讓使用者自己查。智慧局、商工登記無法用網址帶入名稱，點連結時會順便把名稱複製到剪貼簿。
 
