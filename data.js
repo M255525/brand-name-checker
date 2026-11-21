@@ -130,7 +130,7 @@ function screen(name, industry){
     if(geo.length){ add('yellow', 'place', '含地名「' + geo.join('、') + '」：地名不能單獨主張；若和商品實際產地不符，可能被認為使人誤認產地', '商標法第 29 條、第 30 條第 1 項第 8 款'); score -= 10; }
   }
   // 2. 誤認誤信、國家名號、公序良俗
-  MISLEADING.forEach(function(m){ var k = norm(m[0]); if(hasLatin(k) && !hasCJK(k) ? wordIn(lower, m[0].toLowerCase()) : n.indexOf(k) >= 0){ add(m[1], 'misleading', '含「' + m[0] + '」：容易讓人誤認商品的性質、品質或效果' + (m[0] === '有機' || m[0] === 'organic' ? '（農產品要有有機驗證才能標示有機）' : ''), '商標法第 30 條第 1 項第 8 款'); score -= m[1] === 'red' ? 40 : 15; } });
+  MISLEADING.forEach(function(m){ var k = norm(m[0]); if(hasLatin(k) && !hasCJK(k) ? wordIn(lower, m[0].toLowerCase()) : n.indexOf(k) >= 0){ add(m[1], 'misleading', '含「' + m[0] + '」：容易讓人誤認商品的性質、品質或效果' + (m[0] === '有機' || m[0] === 'organic' ? '（要有有機驗證才能這樣標示）' : ''), '商標法第 30 條第 1 項第 8 款'); score -= m[1] === 'red' ? 40 : 15; } });
   NATIONAL.forEach(function(w){ var k = norm(w); if(hasLatin(k) && !hasCJK(k) ? wordIn(lower, w) : n.indexOf(k) >= 0){ add('red', 'national', '含「' + w + '」：國家名號、政府機關或國際組織的名稱不得註冊', '商標法第 30 條第 1 項第 2～4 款'); score -= 50; } });
   OFFENSIVE.forEach(function(w){ var k = norm(w); if(hasLatin(k) && !hasCJK(k) ? wordIn(lower, w) : n.indexOf(k) >= 0){ add('red', 'offensive', '含「' + w + '」：可能被認為妨害公共秩序或善良風俗', '商標法第 30 條第 1 項第 7 款'); score -= 50; } });
   // 3. 和常見知名品牌比對
